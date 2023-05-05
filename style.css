@@ -22,7 +22,7 @@ body {
     background-color: var(--bg);
     color: var(--fg);
     font-size: 18px;
-    /* transition: 0.5s; */
+    transition: 0.5s;
 }
 
 .light {

@@ -2,9 +2,6 @@ const todoInput = document.getElementById('todo-input');
 const todoContainer = document.querySelector('.todos');
 const completedCount = document.querySelector('.completed-count');
 
-// const submitInput = document.querySelector('#submit');
-// const remarks = document.querySelector('.remarks');
-
 var elem = null;
 let todos = [];
 
@@ -33,8 +30,6 @@ function newTodo(value) {
     const todoCheckBox = document.createElement('input');
     const todoCheckBoxLabel = document.createElement('label');
     const todoCross = document.createElement('span');
-
-    // let obj = todos.find((t) => t.value === value);
 
     todoText.textContent = value;
     todoCheckBox.type = 'checkbox';
@@ -80,7 +75,6 @@ function newTodo(value) {
     todo.draggable = true;
     todo.addEventListener('dragstart', (e) => {
         e.dataTransfer.effectAllowed = "move";
-        // e.dataTransfer.setData('text/plain', null);
         elem = e.target;
     });
 
@@ -104,7 +98,7 @@ function newTodo(value) {
         elem = null;
         let index = todos.findIndex((t) => t.value === value);
         todos.splice(index, 1);
-        
+
         if (todo.nextSibling) {
             let index1 = todos.findIndex(
                 (t) => t.value === todo.nextSibling.querySelector('p').textContent
