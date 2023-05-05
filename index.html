@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo app</title>
+</head>
+<body>
+    <div class="top-img"></div>
+
+    <main>
+        <div class="header">
+            <h1>TODO</h1>
+            <div onclick="changeTheme()" class="tgl-btn"></div>
+        </div>
+
+        <div class="type-todo">
+            <div class="circle"></div>
+            <input type="text" id="todo-input" placeholder="Create a new todo...">
+        </div>
+
+        <div class="todos"></div>
+
+        <div class="remarks small-size">
+            <div class="completed-count"></div>
+            <div class="clear" onclick="clearCompleted()">Clear Completed</div>
+
+            <div class="filters small-size">
+                <div class="filter-active" onclick="showAll()">All</div>
+                <div onclick="filterActive()">Active</div>
+                <div onclick="filterCompleted()">Completed</div>
+            </div>
+        </div>
+        <div class="footer">
+            <p class="small-size">Drag and drop to order list</p>
+        </div>
+    </main>
+
+    
+
+    <script src="script.js"></script>
+</body>
+</html>
